@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmela Lasalandra (@carmelarussell_)</title>
+    <style>
+        body { background-color: #000000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0; }
+
+        .navbar {display: flex;
+            flex-direction: column;
+            width: 205px;
+            height: 100vh;
+            background-color: #000;
+            padding: 20px;
+            position: fixed;
+            border-right: 1px solid #333}
+
+        .navbar img {width: 150px;
+            margin-bottom: 40px;}
+
+        .navbar ul {list-style: none;
+            padding: 0;}
+
+        .navbar ul li {padding: 15px 0;
+            font-size: 18px;
+            cursor: pointer;}
+
+        .profile-section {margin-left: 250px;
+            padding: 20px;}
+
+        .profile-header {display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;}
+
+        .profile-info {display: flex;
+            align-items: center;
+            gap: 30px;}
+
+        .profile-info img {width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: none;}
+
+        .profile-details {font-size: 18px;}
+        .profile-details h2 {margin: 5px 0;}
+        .profile-stats {display: flex;
+            gap: 20px;}
+        .profile-stats div {font-size: 18px;}
+
+        .bio {font-size: 14px;
+            margin-top: 10px;}
+
+        .highlight-section {display: flex;
+            gap: 50px;
+            margin: 30px 0; }
+
+        .highlight {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    padding: 3px; 
+    border: 1px solid black;}
+
+.highlight img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid black; }
+
+
+        .post-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px; }
+
+        .post-section img {
+            width: 100%;
+            height: auto;}
+
+        .nav-footer {
+            position: fixed;
+            bottom: 0;  
+            width: 300px;
+            background-color: #000;
+            padding: 10px;}
+
+        .action-buttons {
+    display: flex;
+    gap: 10px;}
+
+.action-buttons button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;}
+
+.action-buttons button:hover {
+    background-color: #555;}
+
+.more-options {
+    font-size: 20px;
+    padding: 5px 15px;}
+
+.highlight-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;}
+
+.highlight-text {
+    margin-top: 15px; 
+    font-size: 16px; 
+    color: white; }
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;}
+
+.tabs div {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;}
+
+.tabs div:hover {
+    color: #aaa; }
+
+.active-tab {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;}
+
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <img src="pictures/instagram.jpg" alt="Instagram Logo" class="navbar-logo"> 
+    <ul>
+        <li>Home</li>
+        <li>Search</li>
+        <li>Explore</li>
+        <li>Reels</li>
+        <li>Messages</li>
+        <li>Notifications</li>
+        <li>Create</li>
+        <li>Profile</li>
+        <li>AI Studio</li>
+        <li>Threads</li>
+        <li>More</li>
+    </ul>
+</div>
+
+<div class="profile-section">
+    <div class="profile-header">
+        <div class="profile-info">
+            <img src="pictures/pfp.jpg" alt="Profile Image">
+            <div class="profile-details">
+                <h2>carmelarussell_</h2>
+                <div class="profile-stats">
+                    <div>10 posts</div>
+                    <div>1,177 followers</div>
+                    <div>469 following</div>
+                </div>
+                <p class="bio">Carmela Lasalandra <br> 
+                <a href="https://www.instagram.com/carmelaetc/" target="_blank" 
+                style="color: white; text-decoration: none;" 
+                onmouseover="this.style.textDecoration='underline'" 
+                onmouseout="this.style.textDecoration='none'">@carmelaetc</a> <br>. ݁₊ ⊹ . ݁˖ . ݁</p>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button id="follow-btn" onclick="toggleFollow()">Follow</button>
+            <button>Message</button>
+            <button class="more-options">...</button>
+        </div>
+        <script>
+            function toggleFollow() {
+                var followBtn = document.getElementById("follow-btn");
+                if (followBtn.innerHTML === "Follow") {
+                    followBtn.innerHTML = "Following"; } else 
+                    {followBtn.innerHTML = "Follow"; } }
+        </script>
+        
+        
+    </div>
+
+    <div class="highlight-section">
+        <div class="highlight-container">
+            <div class="highlight"><img src="pictures/highlight1.jpg" alt="Highlight"></div>
+            <p class="highlight-text">🍸</p> 
+        </div>
+        <div class="highlight-container">
+            <div class="highlight"><img src="pictures/highlight2.jpg" alt="Highlight"></div>
+            <p class="highlight-text">🪩</p>
+        </div>
+        <div class="highlight-container">
+            <div class="highlight"><img src="pictures/highlight3.jpg" alt="Highlight"></div>
+            <p class="highlight-text">📸</p>
+        </div>
+        <div class="highlight-container">
+            <div class="highlight"><img src="pictures/highlight4.jpg" alt="Highlight"></div>
+            <p class="highlight-text">🫀</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+<div class="tabs">
+    <div class="active-tab">Posts</div>
+    <div>Tagged</div>
+</div>
+
+
+    <div class="post-section">
+        <img src="pictures/post1.jpg" alt="Post Image">
+        <img src="pictures/post2.jpg" alt="Post Image">
+        <img src="pictures/post3.jpg" alt="Post Image">
+        <img src="pictures/post4.jpg" alt="Post Image">
+        <img src="pictures/post5.jpg" alt="Post Image">
+        <img src="pictures/post6.jpg" alt="Post Image">
+        <img src="pictures/post7.jpg" alt="Post Image">
+        <img src="pictures/post8.jpg" alt="Post Image">
+        <img src="pictures/post9.jpg" alt="Post Image">
+        <img src="pictures/post10.jpg" alt="Post Image">
+    </div>
+</div>
+
+</body>
+</html>
